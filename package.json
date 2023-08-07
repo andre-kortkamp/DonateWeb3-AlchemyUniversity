@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/andre-kortkamp/DonateWeb3-AlchemyUniversity/issues"
   },
-  "homepage": "https://github.com/andre-kortkamp/DonateWeb3-AlchemyUniversity#readme"
+  "homepage": "https://github.com/andre-kortkamp/DonateWeb3-AlchemyUniversity#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.17.1"
+  }
 }
