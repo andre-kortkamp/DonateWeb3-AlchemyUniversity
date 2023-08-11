@@ -3,6 +3,8 @@ import { ethers } from "ethers";
 import Head from 'next/head'
 import React, { useEffect, useState } from "react";
 import styles from '../styles/Home.module.css'
+import image from '../public/logo.png'
+import Image from 'next/image'
 
 export default function Home() {
   const contractAddress = "0x6c6907dE767ca88F75c12c6339Bc729a4d6195cB";
@@ -162,6 +164,12 @@ export default function Home() {
         <meta name="description" content="Tipping site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Image
+      src={image}
+      width={350}
+      height={350}
+      alt="logo"
+    />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -180,20 +188,25 @@ export default function Home() {
                 <input
                   id="name"
                   type="text"
-                  placeholder="anon"
+                  placeholder="Your name..."
                   onChange={onNameChange}
                   />
               </div>
               <br/>
               <div class="formgroup">
                 <label>
-                Send your message after your donation:
+                Send your message to 
+                <br/>
+                be recorded on the blockchain
+                <br/>
+                along with your donation
+                <br/> FOREVER!
                 </label>
                 <br/>
 
                 <textarea
                   rows={3}
-                  placeholder="Hope this helps!"
+                  placeholder="Your message..."
                   id="message"
                   onChange={onMessageChange}
                   required
@@ -204,14 +217,15 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={donate}
+                  className={styles.connectButton}
                 >
-                  Send 1 Donate for 0.001ETH
+                  Send Donate
                 </button>
               </div>
             </form>
           </div>
         ) : (
-          <button onClick={connectWallet}> Connect your wallet </button>
+          <button className={styles.connectButton} onClick={connectWallet}> Connect your wallet </button>
         )}
       </main>
 
