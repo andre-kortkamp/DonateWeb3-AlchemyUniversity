@@ -11,3 +11,4 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+DonateWeb3 deployed to: 0x6c6907dE767ca88F75c12c6339Bc729a4d6195cB SEPOLIA
